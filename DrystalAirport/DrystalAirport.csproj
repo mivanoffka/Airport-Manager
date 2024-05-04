@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{851848DC-80C0-4A00-998C-433E9B1B5E1C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DrystalAirport</RootNamespace>
+    <AssemblyName>DrystalAirport</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AirportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AirportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DictionaryHelper.cs" />
+    <Compile Include="ReportForms\AiportsReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\AiportsReportForm.Designer.cs">
+      <DependentUpon>AiportsReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\StatusesReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\StatusesReportForm.Designer.cs">
+      <DependentUpon>StatusesReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\ScheduleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\ScheduleForm.Designer.cs">
+      <DependentUpon>ScheduleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableForms\JournalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableForms\JournalForm.Designer.cs">
+      <DependentUpon>JournalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableForms\FlightsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableForms\FlightsForm.Designer.cs">
+      <DependentUpon>FlightsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableForms\StatusesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableForms\StatusesForm.Designer.cs">
+      <DependentUpon>StatusesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableForms\DirectionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableForms\DirectionsForm.Designer.cs">
+      <DependentUpon>DirectionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableForms\AirlinesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableForms\AirlinesForm.Designer.cs">
+      <DependentUpon>AirlinesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableForms\AirportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableForms\AirportsForm.Designer.cs">
+      <DependentUpon>AirportsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="ReportForms\AiportsReportForm.resx">
+      <DependentUpon>AiportsReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\Reports\AirportsReport.rdlc" />
+    <EmbeddedResource Include="ReportForms\Reports\ScheduleReport.rdlc" />
+    <EmbeddedResource Include="ReportForms\Reports\StatusReport.rdlc" />
+    <EmbeddedResource Include="ReportForms\StatusesReportForm.resx">
+      <DependentUpon>StatusesReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\ScheduleForm.resx">
+      <DependentUpon>ScheduleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableForms\JournalForm.resx">
+      <DependentUpon>JournalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableForms\FlightsForm.resx">
+      <DependentUpon>FlightsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableForms\StatusesForm.resx">
+      <DependentUpon>StatusesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableForms\DirectionsForm.resx">
+      <DependentUpon>DirectionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableForms\AirlinesForm.resx">
+      <DependentUpon>AirlinesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableForms\AirportsForm.resx">
+      <DependentUpon>AirportsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="AirportDataSet.xsc">
+      <DependentUpon>AirportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AirportDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AirportDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AirportDataSet.xss">
+      <DependentUpon>AirportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="airplaneIcon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
