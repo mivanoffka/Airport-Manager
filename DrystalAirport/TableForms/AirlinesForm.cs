@@ -145,11 +145,6 @@ namespace DrystalAirport.Forms
         {
         }
 
-        private void DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-
-        }
-
         private void airlinesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();

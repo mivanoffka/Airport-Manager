@@ -103,11 +103,6 @@ namespace DrystalAirport.Forms
 
         }
 
-        private void dataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-
-        }
-
         #region Элементы управления
 
         private void ShowWarning()
@@ -223,7 +218,6 @@ namespace DrystalAirport.Forms
             if (dataGridView.SelectedRows.Count > 0)
             {
                 DataGridViewRow row = dataGridView.SelectedRows[0];
-                row.Cells[1].Value = dateTextBox.Text;
             }
 
         }
@@ -366,24 +360,12 @@ namespace DrystalAirport.Forms
             dataGridView.EndEdit();
             bindingSource.EndEdit();
 
-            if (airportDataSet.HasChanges())
-            {
-                DialogResult result = MessageBox.Show("Хотите сохранить изменения перед переходом к другой таблице? В противном случае все изменения будут потеряны", "Вопрос", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-                    Save();
-                }
-                if (result == DialogResult.Cancel)
-                {
-                    return;
-                }
-            }
-
             FlightsForm form = new FlightsForm();
             form.ShowDialog(this);
             form.Dispose();
 
             this.flightsTableAdapter.Fill(airportDataSet.Flights);
+            this.flightsInfoViewTableAdapter.Fill(airportDataSet.FlightsInfoView);
             UpdateFlightsFilter();
         }
 
@@ -408,8 +390,12 @@ namespace DrystalAirport.Forms
             if (dataGridView.SelectedCells.Count > 0)
             {
                 int rowIndex = dataGridView.SelectedCells[0].RowIndex;
-                StatusesReportForm form = new StatusesReportForm(flightComboBox.Text, dateTextBox.Text, timePicker.Text, statusComboBox.Text);
+                StatusesReportForm form = new StatusesReportForm(flightComboBox.Text, datePicker.Text, timePicker.Text, statusComboBox.Text);
                 form.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Не выбран рейс.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -426,7 +412,7 @@ namespace DrystalAirport.Forms
 
         private void StartEditing()
         {
-            backUp = new string[4] {statusComboBox.Text, flightComboBox.Text, timePicker.Text, flightDatePicker.Text};
+            backUp = new string[4] {statusComboBox.Text, flightComboBox.Text, timePicker.Text, datePicker.Text};
 
             goNextButton.Enabled = false;
             goBackButton.Enabled = false;
@@ -444,12 +430,11 @@ namespace DrystalAirport.Forms
             statusesFilter.Enabled = false;
             rollbackButton.Enabled = false;
             
-            flightDatePicker.Enabled = true;
+            datePicker.Enabled = true;
 
             statusComboBox.Enabled = true;
             flightComboBox.Enabled = true;
             timePicker.Enabled = true;
-            dateTextBox.Enabled = true;
 
             dataGridView.Enabled = false;
        
@@ -466,8 +451,7 @@ namespace DrystalAirport.Forms
             statusComboBox.Enabled = false;
             flightComboBox.Enabled = false;
             timePicker.Enabled = false;
-            dateTextBox.Enabled = false;
-            flightDatePicker.Enabled = false;
+            datePicker.Enabled = false;
 
             goNextButton.Enabled = true;
             goBackButton.Enabled = true;
@@ -510,7 +494,7 @@ namespace DrystalAirport.Forms
             statusComboBox.Text = backUp[0];
             flightComboBox.Text = backUp[1];
             timePicker.Text = backUp[2];
-            flightDatePicker.Text = backUp[3];
+            datePicker.Text = backUp[3];
 
             EndEditing();
         }
@@ -580,6 +564,11 @@ namespace DrystalAirport.Forms
         }
 
         private void statusComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }

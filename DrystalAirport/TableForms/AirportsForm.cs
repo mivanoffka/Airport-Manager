@@ -308,5 +308,10 @@ namespace DrystalAirport.Forms
 
             dataGridView_SelectionChanged(null, null);
         }
+
+        private void groupBox11_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

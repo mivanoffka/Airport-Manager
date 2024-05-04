@@ -338,19 +338,6 @@ namespace DrystalAirport.Forms
             dataGridView.EndEdit();
             bindingSource.EndEdit();
 
-            if (airportDataSet.HasChanges())
-            {
-                DialogResult result = MessageBox.Show("Хотите сохранить изменения перед переходом к другой таблице? В противном случае все изменения будут потеряны", "Вопрос", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-                    Save();
-                }
-                if (result == DialogResult.Cancel)
-                {
-                    return;
-                }
-            }
-
             AirportsForm form = new AirportsForm();
             form.ShowDialog(this);
             form.Dispose();
@@ -363,19 +350,6 @@ namespace DrystalAirport.Forms
         {
             dataGridView.EndEdit();
             bindingSource.EndEdit();
-
-            if (airportDataSet.HasChanges())
-            {
-                DialogResult result = MessageBox.Show("Хотите сохранить изменения перед переходом к другой таблице? В противном случае все изменения будут потеряны", "Вопрос", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-                    Save();
-                }
-                if (result == DialogResult.Cancel)
-                {
-                    return;
-                }
-            }
 
             AirlinesForm form = new AirlinesForm();
             form.ShowDialog(this);
