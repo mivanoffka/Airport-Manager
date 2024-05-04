@@ -106,6 +106,8 @@ namespace DrystalAirport
 
             //this.tableAdapter.Fill(this.airportDataSet.JournalExtendedView);
 
+
+
             bindingSource.Sort = "FlightDate DESC, FlightTime DESC";
             if (sender == inFlightsButton)
             {
@@ -125,6 +127,16 @@ namespace DrystalAirport
         {
             ScheduleForm form = new ScheduleForm();
             form.ShowDialog();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

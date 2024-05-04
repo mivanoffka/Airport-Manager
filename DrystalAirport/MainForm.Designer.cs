@@ -35,7 +35,6 @@
             this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableAdapter = new DrystalAirport.AirportDataSetTableAdapters.JournalExtendedViewTableAdapter();
             this.tableAdapterManager = new DrystalAirport.AirportDataSetTableAdapters.TableAdapterManager();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.outFlightsButton = new System.Windows.Forms.RadioButton();
             this.inFlightsButton = new System.Windows.Forms.RadioButton();
@@ -46,7 +45,6 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.statusesButton = new System.Windows.Forms.Button();
             this.directionsButton = new System.Windows.Forms.Button();
             this.airlinesButton = new System.Windows.Forms.Button();
@@ -54,11 +52,31 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.airportDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // airportDataSet
@@ -87,37 +105,27 @@
             this.tableAdapterManager.StatusesTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = DrystalAirport.AirportDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.outFlightsButton);
-            this.groupBox1.Controls.Add(this.inFlightsButton);
-            this.groupBox1.Controls.Add(this.dataGridView);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1315, 811);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Информационное табло";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(27, 765);
+            this.label1.Location = new System.Drawing.Point(3, 826);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1259, 28);
+            this.label1.Size = new System.Drawing.Size(1363, 40);
             this.label1.TabIndex = 9;
             this.label1.Text = "Вносить правки напрямую в информационное табло нельзя. Воспользуйтесь меню справа" +
     ", чтобы перейти к таблице \"Журнал рейсов\"";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // outFlightsButton
             // 
             this.outFlightsButton.Appearance = System.Windows.Forms.Appearance.Button;
-            this.outFlightsButton.Location = new System.Drawing.Point(658, 34);
+            this.outFlightsButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.outFlightsButton.Location = new System.Drawing.Point(684, 3);
             this.outFlightsButton.Name = "outFlightsButton";
-            this.outFlightsButton.Size = new System.Drawing.Size(637, 40);
+            this.outFlightsButton.Size = new System.Drawing.Size(676, 38);
             this.outFlightsButton.TabIndex = 8;
             this.outFlightsButton.TabStop = true;
             this.outFlightsButton.Text = "Вылеты";
@@ -128,9 +136,10 @@
             // inFlightsButton
             // 
             this.inFlightsButton.Appearance = System.Windows.Forms.Appearance.Button;
-            this.inFlightsButton.Location = new System.Drawing.Point(16, 34);
+            this.inFlightsButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.inFlightsButton.Location = new System.Drawing.Point(3, 3);
             this.inFlightsButton.Name = "inFlightsButton";
-            this.inFlightsButton.Size = new System.Drawing.Size(638, 40);
+            this.inFlightsButton.Size = new System.Drawing.Size(675, 38);
             this.inFlightsButton.TabIndex = 7;
             this.inFlightsButton.TabStop = true;
             this.inFlightsButton.Text = " Прилёты";
@@ -155,15 +164,16 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
             this.dataGridView.DataSource = this.bindingSource;
+            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridView.Location = new System.Drawing.Point(16, 80);
+            this.dataGridView.Location = new System.Drawing.Point(0, 0);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.RowHeadersWidth = 72;
             this.dataGridView.RowTemplate.Height = 31;
             this.dataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView.Size = new System.Drawing.Size(1279, 676);
+            this.dataGridView.Size = new System.Drawing.Size(1363, 770);
             this.dataGridView.TabIndex = 6;
             // 
             // dataGridViewTextBoxColumn1
@@ -217,27 +227,12 @@
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.statusesButton);
-            this.groupBox2.Controls.Add(this.directionsButton);
-            this.groupBox2.Controls.Add(this.airlinesButton);
-            this.groupBox2.Controls.Add(this.airportsButton);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Location = new System.Drawing.Point(1342, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(300, 811);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Перейти к таблицам";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
-            // 
             // statusesButton
             // 
-            this.statusesButton.Location = new System.Drawing.Point(10, 254);
+            this.statusesButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.statusesButton.Location = new System.Drawing.Point(8, 233);
             this.statusesButton.Name = "statusesButton";
-            this.statusesButton.Size = new System.Drawing.Size(280, 38);
+            this.statusesButton.Size = new System.Drawing.Size(307, 39);
             this.statusesButton.TabIndex = 6;
             this.statusesButton.Text = "Статусы";
             this.statusesButton.UseVisualStyleBackColor = true;
@@ -245,9 +240,10 @@
             // 
             // directionsButton
             // 
-            this.directionsButton.Location = new System.Drawing.Point(10, 210);
+            this.directionsButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.directionsButton.Location = new System.Drawing.Point(8, 188);
             this.directionsButton.Name = "directionsButton";
-            this.directionsButton.Size = new System.Drawing.Size(280, 38);
+            this.directionsButton.Size = new System.Drawing.Size(307, 39);
             this.directionsButton.TabIndex = 5;
             this.directionsButton.Text = "Направления";
             this.directionsButton.UseVisualStyleBackColor = true;
@@ -255,9 +251,10 @@
             // 
             // airlinesButton
             // 
-            this.airlinesButton.Location = new System.Drawing.Point(10, 166);
+            this.airlinesButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.airlinesButton.Location = new System.Drawing.Point(8, 143);
             this.airlinesButton.Name = "airlinesButton";
-            this.airlinesButton.Size = new System.Drawing.Size(280, 38);
+            this.airlinesButton.Size = new System.Drawing.Size(307, 39);
             this.airlinesButton.TabIndex = 4;
             this.airlinesButton.Text = "Авиакомпании";
             this.airlinesButton.UseVisualStyleBackColor = true;
@@ -265,9 +262,10 @@
             // 
             // airportsButton
             // 
-            this.airportsButton.Location = new System.Drawing.Point(10, 122);
+            this.airportsButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.airportsButton.Location = new System.Drawing.Point(8, 98);
             this.airportsButton.Name = "airportsButton";
-            this.airportsButton.Size = new System.Drawing.Size(280, 38);
+            this.airportsButton.Size = new System.Drawing.Size(307, 39);
             this.airportsButton.TabIndex = 3;
             this.airportsButton.Text = "Аэропорты";
             this.airportsButton.UseVisualStyleBackColor = true;
@@ -275,9 +273,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(10, 78);
+            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button3.Location = new System.Drawing.Point(8, 53);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(280, 38);
+            this.button3.Size = new System.Drawing.Size(307, 39);
             this.button3.TabIndex = 2;
             this.button3.Text = "Рейсы";
             this.button3.UseVisualStyleBackColor = true;
@@ -285,36 +284,192 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(10, 34);
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.Location = new System.Drawing.Point(8, 8);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(280, 38);
+            this.button1.Size = new System.Drawing.Size(307, 39);
             this.button1.TabIndex = 0;
             this.button1.Text = "Журнал полётов";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 350F));
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel4, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(5, 5);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1766, 926);
+            this.tableLayoutPanel1.TabIndex = 7;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.groupBox3);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(10, 10, 5, 10);
+            this.panel2.Size = new System.Drawing.Size(1410, 920);
+            this.panel2.TabIndex = 1;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.panel5);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Location = new System.Drawing.Point(10, 10);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(1395, 900);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Информационное табло";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.tableLayoutPanel2);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(3, 31);
+            this.panel5.Name = "panel5";
+            this.panel5.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.panel5.Size = new System.Drawing.Size(1389, 866);
+            this.panel5.TabIndex = 0;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.panel3, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(10, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1369, 866);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.dataGridView);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 53);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1363, 770);
+            this.panel3.TabIndex = 1;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.inFlightsButton, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.outFlightsButton, 1, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1363, 44);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.groupBox4);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(1419, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Padding = new System.Windows.Forms.Padding(5, 10, 10, 10);
+            this.panel4.Size = new System.Drawing.Size(344, 920);
+            this.panel4.TabIndex = 2;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.tableLayoutPanel4);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox4.Location = new System.Drawing.Point(5, 10);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(329, 900);
+            this.groupBox4.TabIndex = 8;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Переход к таблицам";
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Controls.Add(this.statusesButton, 0, 5);
+            this.tableLayoutPanel4.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.directionsButton, 0, 4);
+            this.tableLayoutPanel4.Controls.Add(this.button3, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.airlinesButton, 0, 3);
+            this.tableLayoutPanel4.Controls.Add(this.airportsButton, 0, 2);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 31);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.Padding = new System.Windows.Forms.Padding(5);
+            this.tableLayoutPanel4.RowCount = 6;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(323, 280);
+            this.tableLayoutPanel4.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.tableLayoutPanel1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(5);
+            this.panel1.Size = new System.Drawing.Size(1776, 936);
+            this.panel1.TabIndex = 8;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(168F, 168F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1654, 835);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(1776, 936);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Информационная система аэропорта от Drystal Systems Inc.";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.airportDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            this.groupBox2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -325,12 +480,10 @@
         private System.Windows.Forms.BindingSource bindingSource;
         private AirportDataSetTableAdapters.JournalExtendedViewTableAdapter tableAdapter;
         private AirportDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton outFlightsButton;
         private System.Windows.Forms.RadioButton inFlightsButton;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button statusesButton;
         private System.Windows.Forms.Button directionsButton;
         private System.Windows.Forms.Button airlinesButton;
@@ -345,6 +498,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
     }
 }
 
